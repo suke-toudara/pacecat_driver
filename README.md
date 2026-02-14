@@ -2,7 +2,8 @@
 
 ## 概要
 
-このパッケージは、LiDARデバイス（PACE-CAT等）からシリアル(UART)経由でデータを受信し、ROS2の`sensor_msgs/msg/LaserScan`として/scanトピックにパブリッシュするドライバです。
+このパッケージは、LiDARデバイス（PACE-CAT等）からシリアル(UART)経由でデータを受信し、
+ROS2の`sensor_msgs/msg/LaserScan`として/scanトピックにパブリッシュするドライバです。
 
 ## パケット仕様
 
@@ -36,10 +37,6 @@ ros2 run pacecat_driver pacecat_driver_node
 - `read_size` (int): 1回のreadで読む最大バイト数 (例: 1024)
 - `timer_frequency_hz` (double): データ処理周期Hz (例: 10.0)
 
-例:
-```bash
-ros2 run pacecat_driver pacecat_driver_node --ros-args -p port:=/dev/ttyUSB0 -p baudrate:=115200 -p timer_frequency_hz:=20
-```
 
 ### 出力トピック
 - `/scan` (sensor_msgs/msg/LaserScan)
@@ -51,10 +48,6 @@ ros2 run pacecat_driver pacecat_driver_node --ros-args -p port:=/dev/ttyUSB0 -p 
 - 1パケット30点、20パケットで1周（600点）となります。
 - 距離はmm単位→m単位に変換してLaserScanに格納されます。
 - IntensityもLaserScanのintensitiesに格納されます。
-
-## 参考
-- PACE-CAT LiDARプロトコル仕様書
-- ROS2 sensor_msgs/msg/LaserScan
 
 ---
 
