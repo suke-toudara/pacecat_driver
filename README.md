@@ -1,8 +1,8 @@
-# pacecat_driver README
+# pacecat_driver
 
 ## 概要
 
-このパッケージは、LiDARデバイス（PACE-CAT等）からシリアル(UART)経由でデータを受信し、
+このパッケージは、LiDARデバイス（Pacecat LDS-E120-R）からシリアル(UART)経由でデータを受信し、
 ROS2の`sensor_msgs/msg/LaserScan`として/scanトピックにパブリッシュするドライバです。
 
 ## パケット仕様
@@ -49,6 +49,8 @@ ros2 run pacecat_driver pacecat_driver_node
 - 距離はmm単位→m単位に変換してLaserScanに格納されます。
 - IntensityもLaserScanのintensitiesに格納されます。
 
----
+## 参考リンク
+- [BlueSeaLidar ROS Driver (GitHub)](https://github.com/BlueSeaLidar/bluesea2)
+- [Pacecat ダウンロードページ](https://www.pacecat.net/downloads/)
 
 ご質問・不具合はリポジトリのIssueまたは開発者までご連絡ください。
