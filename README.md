@@ -51,6 +51,5 @@ ros2 run pacecat_driver pacecat_driver_node
 
 ## 参考リンク
 - [BlueSeaLidar ROS Driver (GitHub)](https://github.com/BlueSeaLidar/bluesea2)
-- [Pacecat ダウンロードページ](https://www.pacecat.net/downloads/)
 
 ご質問・不具合はリポジトリのIssueまたは開発者までご連絡ください。
